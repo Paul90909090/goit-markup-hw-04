@@ -148,6 +148,7 @@ color: var(--accent-color);
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
 /* hero */
 .hero-title{
     display: inline-block;
@@ -167,9 +168,19 @@ color: var(--accent-color);
 
 }
 .hero{
-    background-color: #2F303A;
     text-align: center;
     padding: 200px  0px;
+    background-color: rgba(47, 48, 58, 0.40);
+}
+.overlay{
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.40) ,rgba(47, 48, 58, 0)) ,
+    url(../images/Imghero.jpg);
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
 
 /* Особенности */
@@ -189,6 +200,19 @@ color: var(--accent-color);
 .features-item{
     width: 270px;
 }
+.features-item::before{
+    display: block;
+    height: 120px;
+    content: "";
+
+    background-image: url(../images/antenna\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+
+}
+
 
 .features .features-title{
     color: var(--secondary-color);
