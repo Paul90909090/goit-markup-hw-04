@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-      <header class="container header">
+    
+      <header class="header ">
+        <div class=" header-container container" >
         <!-- site nav -->
         <nav class="main-nav">
           <a class="logo link" href=""
@@ -40,26 +42,32 @@
         </nav>
         <!-- auth nav -->
         <ul class="auth-nav list">
-          <li class="auth-nav-item">
-            <a href="mailto:info@devstudio.com" class="auth-nav-link link"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="auth-nav-item">
-            <a href="tel:380961111111" class="auth-nav-link link"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <li class="auth-nav-item">
+          <a href="mailto:info@devstudio.com" class="auth-nav-link link">
+            <svg class="header-icon">
+              <use href="./images/icons.svg#icon-post-icon"></use>
+            </svg>
+            info@devstudio.com</a
+          >
+        </li>
+        <li class="auth-nav-item">
+          <a href="tel:380961111111" class="auth-nav-link link">
+            <svg class="header-icon">
+              <use href="./images/icons.svg#icon-smartphonephone-icon"></use>
+            </svg>
+            +38 096 111 11 11</a
+          >
+        </li>
+      </ul>
+        </div>
       </header>
-
    
 
     <!-- site nav -->
 
     <main>
       <div class="container">
-        <section class="section ">
+        <section class="section">
           <h1 hidden>Portfolio</h1>
           <ul class="portfolio-nav list">
             <li>

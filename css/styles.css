@@ -51,10 +51,15 @@ body {
     line-height: 1.7;
     letter-spacing: 0.28px;
    }
-   .header{
+   .header-container{
     display: flex;
     align-items: center;
     width: 1600px;
+    
+   }
+   .header{
+    margin: 0 auto;
+    max-width: 1600px;
     border-bottom: 1px solid #ECECEC;
    }
    
@@ -89,7 +94,6 @@ img{
 /* site nav */
 .main-nav{
     display: flex;
-
     align-items: center;
 
 }
@@ -131,10 +135,17 @@ img{
     margin-left: auto;
     gap: 50px;
 }
+.header-icon{
+    width: 16px;
+    height: 12px;
+    fill: currentColor;
+    vertical-align: middle;
+}
 
-.auth-nav .auth-nav-link:hover, 
-.auth-nav .auth-nav-link:focus {
+.auth-nav-link:hover, 
+.auth-nav-link:focus {
 color: var(--accent-color);
+outline: none;
 }
 .auth-nav-link {
     color: var(--main-color);
@@ -199,18 +210,21 @@ color: var(--accent-color);
 
 .features-item{
     width: 270px;
+    margin-left: 0;
+    margin-right: 0;
 }
-.features-item::before{
-    display: block;
-    height: 120px;
-    content: "";
+.features-icon-box{
+display: flex;
+justify-content: center;
+align-items: center;
 
-    background-image: url(../images/antenna\ 1.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
-    border-radius: 4px;
-
+background-color: #F5F4FA;
+height: 120px;
+margin-bottom: 30px;
+}
+.features-icon{
+    width: 70px;
+    height: 70px;
 }
 
 
@@ -284,6 +298,8 @@ color: var(--accent-color);
 }
 .team-item{
     background-color: var(--main-white-color);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .team-list{
@@ -292,14 +308,61 @@ color: var(--accent-color);
 }
 
 .team-card{
-    pad: 30px 0;
+    padding: 30px 0;
     text-align: center;
 }
-/* footer */
-.footer{
-    padding: 60px 0;
+
+.network-list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
 }
 
+.network-icon-box{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    color: #AFB1B8;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.network-icon-box:hover,
+.network-icon-box:focus{
+    background-color: var(--accent-color);
+    color: var(--main-white-color);
+    outline: none;
+}
+
+.network-icons{
+    width: 20px;
+    height: 20px; 
+    fill: currentColor;   
+}
+
+/* footer */
+.footer{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 0;
+    background-color: #2F303A
+}
+.footer-container{
+    display: flex;
+}
+.footer-nav{
+    margin-right: 70px;
+}
+.footer-network > h2{
+    color: var(--main-white-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
 .footer-list{
     margin-bottom: 9px;
     display: flex;
@@ -317,15 +380,30 @@ color: var(--accent-color);
 .footer .contact{
     color: var(--adress-footer-color)
 } 
-.footer{
-    background-color: #2F303A
-}
 .footer .footer-logo{
 color: #FFFFFF;
 
 }
 .footer .footer-accent{
     color: #2196F3;
+}
+.footer-network-list{
+display: flex;
+margin-top: 20px;
+margin-right: auto;
+}
+.footer-icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+.footer-icons{
+width: 20px;
+height: 20px;
+fill: rgba(255, 255, 255, 0.10);
 }
 /* button */
 .button{
@@ -397,9 +475,16 @@ color: #FFFFFF;
     flex-wrap: wrap;
     margin-top: 50px;
     gap: 30px;
-
 }
- 
+.portfolio-item{
+    border: 1px solid #EEE;
+    width: 370px;
+}
+
+.portfolio-item:hover{
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
 
 .portfolio-title{
     font-size: 18px;
@@ -442,7 +527,8 @@ color: #FFFFFF;
 .portfolio-title-button:hover ,
 .portfolio-title-button:focus {
     color: var(--main-white-color);
-    background: var(--accent-color)
+    background: var(--accent-color);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 .portfolio-title {
     color: var(--secondary-color);
@@ -466,5 +552,5 @@ color: #FFFFFF;
     margin-top: 4px;
 }
 .portfolio-card{
-    margin: 20px 0;
+    padding: 20px 24px;
 }
