@@ -325,8 +325,8 @@ margin-bottom: 30px;
     justify-content: center;
     align-items: center;
     color: #AFB1B8;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
 }
 .network-icon-box:hover,
@@ -340,6 +340,35 @@ margin-bottom: 30px;
     width: 20px;
     height: 20px; 
     fill: currentColor;   
+}
+/* CLIENTS */
+.clients-list{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.clients-icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+    color: #AFB1B8 ;
+    
+    
+}
+.clients-icon-box:hover ,
+.clients-icon-box:focus{
+color: var(--accent-color);
+border-color: var(--accent-color);
+}
+.clients-icon{
+    margin: 16px 32px;
+    width: 106px;
+    height: 60px;
+    fill:currentColor;
 }
 
 /* footer */
@@ -391,6 +420,7 @@ color: #FFFFFF;
 display: flex;
 margin-top: 20px;
 margin-right: auto;
+gap: 10px;
 }
 .footer-icon-box{
     display: flex;
@@ -399,11 +429,17 @@ margin-right: auto;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.10);
+    color: var(--main-white-color);
 }
 .footer-icons{
 width: 20px;
 height: 20px;
-fill: rgba(255, 255, 255, 0.10);
+fill: currentColor;
+}
+.footer-icon-box:hover ,
+.footer-icon-box:focus{
+    background-color: var(--accent-color);
 }
 /* button */
 .button{
