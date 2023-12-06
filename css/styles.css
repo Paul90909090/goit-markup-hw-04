@@ -84,7 +84,8 @@ body {
     font-size: 26px;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 0.78px;
+    letter-spacing: 0.78px; 
+    outline: none;
 
 }
 img{
@@ -124,6 +125,7 @@ img{
 .site-nav-link:hover,
 .site-nav-link:focus {
  color: var(--accent-color);
+outline: none;
 }
 
 .current {
@@ -140,6 +142,7 @@ img{
     height: 12px;
     fill: currentColor;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .auth-nav-link:hover, 
@@ -158,6 +161,7 @@ outline: none;
 
     padding-top: 32px;
     padding-bottom: 32px;
+
 }
 
 /* hero */
@@ -182,16 +186,13 @@ outline: none;
     text-align: center;
     padding: 200px  0px;
     background-color: rgba(47, 48, 58, 0.40);
-}
-.overlay{
+
     max-width: 1600px;
     height: 600px;
-    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.40) ,rgba(47, 48, 58, 0)) ,
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0)),
     url(../images/Imghero.jpg);
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
 /* Особенности */
@@ -363,9 +364,9 @@ margin-bottom: 30px;
 .clients-icon-box:focus{
 color: var(--accent-color);
 border-color: var(--accent-color);
+outline: none;
 }
 .clients-icon{
-    margin: 16px 32px;
     width: 106px;
     height: 60px;
     fill:currentColor;
@@ -381,16 +382,18 @@ border-color: var(--accent-color);
 }
 .footer-container{
     display: flex;
+    align-items: baseline;
 }
 .footer-nav{
     margin-right: 70px;
 }
-.footer-network > h2{
+.footer-network-title{
     color: var(--main-white-color);
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
+
 }
 .footer-list{
     margin-bottom: 9px;
@@ -484,6 +487,7 @@ fill: currentColor;
     height: 50px;
 
     cursor: pointer;
+    outline: none;
 }
 
 /* logo */
